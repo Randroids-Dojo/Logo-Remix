@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Randroid Dojo</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        margin: 0;
+        padding: 3rem;
+        background: radial-gradient(circle at top, #fefefe 0%, #f2f5f9 55%, #e8ecf3 100%);
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(6px);
+        border-radius: 1.5rem;
+        padding: 3rem;
+        box-shadow: 0 22px 35px rgba(31, 41, 55, 0.12);
+      }
+      h1 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(2.2rem, 4vw, 3rem);
+        color: #1f2937;
+      }
+      p {
+        line-height: 1.65;
+        font-size: 1.05rem;
+        color: #374151;
+      }
+      a {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      code {
+        background: #111827;
+        color: #f9fafb;
+        padding: 0.15rem 0.35rem;
+        border-radius: 0.4rem;
+        font-size: 0.95rem;
+      }
+      footer {
+        margin-top: 2.5rem;
+        font-size: 0.95rem;
+        color: #6b7280;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+      }
+      footer span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      @media (max-width: 640px) {
+        body {
+          padding: 1.75rem;
+        }
+        main {
+          padding: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Randroid’s Dojo</h1>
+      <p>
+        Hello from a GitHub Pages deployment living on <code>randroid.dev</code>.
+        This page is served from GitHub but feels native inside your Squarespace
+        site—just link or redirect to <code>dojo.randroid.dev</code> once DNS is
+        configured.
+      </p>
+      <p>
+        Need to adjust the flow? Clone the repo, edit this <code>index.html</code>,
+        then push to <code>main</code>. The workflow included here will redeploy
+        automatically.
+      </p>
+      <footer>
+        <span>© <span id="y"></span> Randroid</span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12l2-2 4 4 8-8 4 4" />
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7" />
+          </svg>
+          GitHub Pages ready
+        </span>
+      </footer>
+    </main>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
