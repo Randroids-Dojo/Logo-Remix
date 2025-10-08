@@ -4,4 +4,54 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Randroid Dojo</title>
+    <style>
+      /*
+       * Center the logo on the page and add a smooth rotation
+       * animation. The body uses flexbox to align the image both
+       * vertically and horizontally.
+       */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f7f7f7;
+        font-family: sans-serif;
+      }
+
+      /* Style for the logo image. The transition property
+       * ensures the rotation looks smooth. The cursor is set to
+       * pointer to indicate the image is clickable.
+       */
+      #logo {
+        width: 250px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      Embed the SVG from the repository. Because GitHub Pages serves
+      files from the root of the repository, the image can be
+      referenced directly. If you move the file or rename it, be
+      sure to update this path accordingly.
+    -->
+    <img id="logo" src="Randroid-Block-Logo.svg" alt="Randroid Block Logo" />
+
+    <script>
+      // Wrap everything in an immediately invoked function expression
+      // (IIFE) to avoid polluting the global namespace. Each click
+      // increments the rotation by 45° and applies it to the image.
+      (function () {
+        var angle = 0;
+        var logo = document.getElementById('logo');
+        logo.addEventListener('click', function () {
+          angle = (angle + 45) % 360;
+          logo.style.transform = 'rotate(' + angle + 'deg)';
+        });
+      })();
+    </script>
+  </body>
 </html>
